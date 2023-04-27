@@ -70,8 +70,19 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+plugins=(
+    npm
+    vi-mode
+    composer
+    cp
+    dnf
+    docker
+    docker-compose
+    git
+    rsync
+    tmux
+    z
+)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -110,3 +121,4 @@ timezsh() {
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
 alias dotfiles='/usr/bin/git --git-dir=/Users/jossellis/.dotfiles/ --work-tree=/Users/jossellis'
+alias vim='nvim'
